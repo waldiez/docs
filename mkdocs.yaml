@@ -112,3 +112,16 @@ nav:
 not_in_nav: |
   CODE_OF_CONDUCT.md
   static/On-boarding.ipynb
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/waldiez/waldiez
+    - icon: fontawesome/brands/x-twitter
+      link: https://x.com/Waldiez_io
+    - icon: fontawesome/brands/linkedin
+      link: https://www.linkedin.com/company/waldiez
+    - icon: fontawesome/brands/youtube
+      link: https://www.youtube.com/@waldiez
+    - icon: fontawesome/brands/instagram
+      link: https://www.instagram.com/waldiez
