@@ -8,6 +8,7 @@
         "docparams",
         "dotenv",
         "epytext",
+        "fontawesome",
         "forlint",
         "htmlcov",
         "inlinehilite",
