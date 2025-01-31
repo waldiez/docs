@@ -1,0 +1,9 @@
+.local/
+.venv/
+site/
+.cache/
+*cache*
+__pycache__/
+*.py[cod]
+.env
+!.env.example

@@ -1,0 +1,15 @@
+---
+extends: default
+
+rules:
+  empty-values: enable
+  float-values: enable
+  octal-values: enable
+  # quoted-strings: enable
+  comments:
+    min-spaces-from-content: 1
+  line-length:
+    max: 200
+    level: warning
+
+ignore-from-file: [.gitignore, .yamlignore]
