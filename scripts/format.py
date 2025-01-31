@@ -22,10 +22,16 @@ from pathlib import Path
 HAD_TO_MODIFY_SYS_PATH = False
 
 try:
-    from _lib import ROOT_DIR, run_autoflake, run_black, run_isort, run_ruff
+    from _docs_lib import (
+        ROOT_DIR,
+        run_autoflake,
+        run_black,
+        run_isort,
+        run_ruff,
+    )
 except ImportError:
     sys.path.insert(0, str(Path(__file__).resolve().parent))
-    from _lib import (  # type: ignore[unused-ignore]
+    from _docs_lib import (  # type: ignore[unused-ignore, import-not-found]
         ROOT_DIR,
         run_autoflake,
         run_black,

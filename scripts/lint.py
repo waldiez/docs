@@ -20,7 +20,7 @@ from pathlib import Path
 HAD_TO_MODIFY_SYS_PATH = False
 
 try:
-    from _lib import (
+    from _docs_lib import (
         ROOT_DIR,
         run_bandit,
         run_black,
@@ -35,7 +35,7 @@ try:
     )
 except ImportError:
     sys.path.insert(0, str(Path(__file__).resolve().parent))
-    from _lib import (  # type: ignore[unused-ignore]
+    from _docs_lib import (  # type: ignore[unused-ignore, import-not-found]
         ROOT_DIR,
         run_bandit,
         run_black,
