@@ -6,38 +6,48 @@ A jupyter lab extension is provided to help you get started with Waldiez. You ca
 
     - Python >= 3.10, < 3.13
 
-    For the Jupyter lab extension:
-
-    - jupyterlab>=4.0.0,<5
+    Optional:
+    - Docker or Podman to run the provided container images
 
 ### Manually
 
-If not already, install jupyter:
+Waldiez are available on PyPI, so you can install it using pip:
 
 ```shell
-pip install jupyter
+pip install waldiez 
 ```
 
-Install the waldiez extension:
+For UI, you can either use the visual studio code extension or the jupyter lab extension. To install the jupyter lab extension:
 
 ```shell
-pip install waldiez-jupyter
+pip install waldiez[jupyter]  # or pip install waldiez-jupyter
 ```
 
-Start jupyter lab:
+The extension, should be automatically enabled, but you can also enable it manually if needed:
 
 ```shell
-jupyter lab
+jupyter labextension install waldiez
 ```
+
+Another option is waldiez/studio, a simple FastAPI server that provides a UI to interact with Waldiez. You can install it with:
+
+```shell
+pip install waldiez[studio]  # or pip install waldiez-studio
+```
+
+You can also search for "waldiez" for the vscode extension.
 
 ### Using Docker or Podman
 
 Don't want to install anything? A docker image is also available, with jupyter and the waldiez extension pre-installed.
 
-Pull the image:
+Here are the available images:
 
 ```shell
-docker pull waldiez/jupyter
+# I suggest using the jupyter one, to just play around and give it a try.
+docker pull waldiez/jupyter  # jupyter lab with the waldiez extension
+docker pull waldiez/waldiez  # just the waldiez package
+docker pull waldiez/studio  # waldiez/studio.
 ```
 
 Run the container:
