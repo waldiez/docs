@@ -69,7 +69,7 @@ pip install waldiez[studio]  # or pip install waldiez-studio
 pip install waldiez[studio,jupyter]
 ```
 
-!!! note 💡 NOTE:
+!!! note
     These extras enable additional commands like `waldiez lab` (for JupyterLab) and `waldiez studio`.
 
     🧪 Requirements:
@@ -87,7 +87,8 @@ This option gives you:
 * 📦 Easy integration in CI, testing, or isolated dev environments
 * 🔁 Reproducible setup across teams
 
-!!! 📦 Available Images:
+!!! Note
+    📦 Available Images:
 
     - `waldiez/waldiez` — CLI-only: convert and run flows
     - `waldiez/jupyter` — JupyterLab server with Waldiez extension
