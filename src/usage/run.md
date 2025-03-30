@@ -12,11 +12,43 @@ During the flow execution, you might encounter errors that can interrupt the con
 ![Waldiez Error Preview](../static/images/light/error1.webp#only-light)
 ![Waldiez Error Dark Preview](../static/images/dark/error1.webp#only-dark)
 
+!!! Warning
+    If you are on python 3.13, and trying to use a crewAI Tool, this will probably not work, because python3.13 is not yet supported on crawAI (unless we haven't updated this page 😛). Here are some links to check the compatibility:
+
+    * <https://github.com/ag2ai/ag2/blob/main/pyproject.toml#L178-L180>
+    * <https://github.com/crewAIInc/crewAI/blob/main/pyproject.toml#L6>
+
+
 ### Troubleshooting Common Errors
 
 !!! Note
     If an error persists, or new packages were installed, you might need to restart the kernel to apply the changes.
     If this does not resolve the issue, or you need further assistance, please reach out to us, we are more than happy to help!
+
+#### **ChromaDB Installation Fails on Windows**
+
+**Description:** When installing `chromadb` on Windows, you might encounter build errors due to missing C++ build tools.
+
+- **Error Message (example):**
+  
+  ```text
+  error: Microsoft Visual C++ 14.0 or greater is required. Get it with "Microsoft C++ Build Tools"
+    ```
+
+- **Cause:** Some ChromaDB dependencies require native code compilation. Windows systems need additional tools for this. Here is a related link on chroma's repository with a solution (thanks to the author): <https://github.com/chroma-core/chroma/issues/189#issuecomment-1454418844>
+
+- **Solution:**
+  - Install the required C++ build tools from the [Microsoft website](https://visualstudio.microsoft.com/visual-cpp-build-tools/). You probably need to install a few only components (based on you windows version, see the link above if in doubt).
+  - You can manually test the installation of `chromadb` by running the following command in your terminal:
+
+    ```shell
+    pip install chromadb
+    ```
+
+  - If the installation is successful, you can proceed with the flow. If not, check the error messages for more details.
+
+!!!Note
+    This error could also occur with other extra dependencies that might be needed for running a flow, so keep in mind this error in case you are using other packages that require native code compilation.
 
 #### **ValidationError: Agent Not Connected**
 
