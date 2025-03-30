@@ -1,4 +1,4 @@
-# Running a Flow
+## Running a Flow
 
 Once we have setup the models, agents, and connections in the flow, we open the *Edit Flow* modal to specify which connections should be used to initiate the conversation, specify any additional requirements that might be needed. Let's also give the flow a descriptive name and maybe a short description.
 
@@ -9,15 +9,11 @@ Once we have setup the models, agents, and connections in the flow, we open the 
 
 During the flow execution, you might encounter errors that can interrupt the conversation. Here are some common errors and solutions to help you resolve them.
 
-![Waldiez Error Preview](../static/images/light/error1.webp#only-light)
-![Waldiez Error Dark Preview](../static/images/dark/error1.webp#only-dark)
-
 !!! Warning
     If you are on python 3.13, and trying to use a crewAI Tool, this will probably not work, because python3.13 is not yet supported on crawAI (unless we haven't updated this page 😛). Here are some links to check the compatibility:
 
     * <https://github.com/ag2ai/ag2/blob/main/pyproject.toml#L178-L180>
     * <https://github.com/crewAIInc/crewAI/blob/main/pyproject.toml#L6>
-
 
 ### Troubleshooting Common Errors
 
@@ -49,6 +45,9 @@ During the flow execution, you might encounter errors that can interrupt the con
 
 !!!Note
     This error could also occur with other extra dependencies that might be needed for running a flow, so keep in mind this error in case you are using other packages that require native code compilation.
+
+![Waldiez Error Preview](../static/images/light/error1.webp#only-light)
+![Waldiez Error Dark Preview](../static/images/dark/error1.webp#only-dark)
 
 #### **ValidationError: Agent Not Connected**
 

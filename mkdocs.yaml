@@ -91,7 +91,7 @@ nav:
       - Skills: usage/skills.md
       - Agents: usage/agents.md
       - Flow: usage/flow.md
-      - Run: usage/run.md
+      - Running and Troubleshooting: usage/run.md
       - Convert: usage/convert.md
   - Examples:
       - Examples: examples/index.md
