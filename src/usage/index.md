@@ -263,7 +263,6 @@ Waldiez Studio is a lightweight local web application that allows you to:
 * 🧩 Create and edit flows using a visual UI
 * ▶️ Run flows and see output directly in the browser
 * 📤 Export flows to Python or Jupyter formats
-* 💻 Integrate with other tools via REST API
 
 ---
 
