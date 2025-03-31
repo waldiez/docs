@@ -314,6 +314,20 @@ A typical usage would be:
 waldiez studio --host 0.0.0.0 --port 8000
 ```
 
+You can then open your browser and navigate to:
+🔗 <http://localhost:8000>
+
+!!! Note
+    We are using FastAPI's [TrustedHostMiddleware](https://fastapi.tiangolo.com/advanced/middleware/#trustedhostmiddleware), so make sure you visit the correct URL if you are using a different host or port.
+    You can also use the `--trusted-hosts` option to specify a list of trusted hosts.
+    For example, if you are running Waldiez Studio on a remote server, you can use:
+
+    ```shell
+    waldiez studio --trusted-hosts example.com
+    ```
+
+    This will allow you to access waldiez studio from `https://example.com` (assuming that a reverse proxy is set up to forward requests to the correct port and manages SSL).
+
 ## 🧪 Advanced Usage
 
 ### 🐍 Using the Python API
