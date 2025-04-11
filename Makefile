@@ -16,6 +16,7 @@ help:
 	@echo " lint             Lint the code"
 	@echo " forlint          Alias for 'make format && make lint'"
 	@echo " clean            Clean unnecessary files"
+	@echo " patch            Apply patches to the jupyter_contrib_nbextensions package"
 	@echo " docs             Generate the documentation"
 	@echo " docs-live        Generate the documentation in 'live' mode"
 	@echo ""
@@ -35,12 +36,16 @@ forlint: format lint
 clean:
 	python scripts/clean.py
 
+.PHONY: patch
+patch:
+	python scripts/patch.py
+
 .PHONY: docs
-docs:
+docs: patch
 	python -m mkdocs build -d site
 	@echo "open:   file://`pwd`/site/index.html"
 	@echo "or use: \`python -m http.server --directory site\`"
 
 .PHONY: docs-live
-docs-live:
+docs-live: patch
 	python -m mkdocs serve --watch mkdocs.yaml --watch src --dev-addr localhost:8400
